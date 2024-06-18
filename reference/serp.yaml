@@ -161,7 +161,7 @@ paths:
           required: true
 components:
   schemas:
-    User:
+    TODO:
       title: TODO
       type: object
       examples:
