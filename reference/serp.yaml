@@ -5,8 +5,7 @@ info:
   title: serp
   version: '1.0'
   summary: google serp
-servers:
-  - url: 'https://google-pages-scraper.heavyindustries.cyou/v1'
+servers: []
 paths:
   /scrape-and-parse:
     get:
@@ -15,125 +14,13 @@ paths:
       responses:
         '200':
           description: User Found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Get User Alice Smith:
-                  value:
-                    id: 142
-                    firstName: Alice
-                    lastName: Smith
-                    email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
-                    emailVerified: true
-                    signUpDate: '2019-08-24'
+          content: {}
         '404':
           description: User Not Found
       operationId: get-scrape-and-parse
       description: Retrieve the information from Google SERP page.
       x-stoplight:
         id: jc0y71h9p1dq5
-      parameters:
-        - schema:
-            type: string
-            default: hello
-          in: query
-          name: q
-          required: true
-        - schema:
-            type: string
-            default: en
-          in: query
-          name: hl
-          required: true
-        - schema:
-            type: string
-            default: us
-          in: query
-          name: gl
-          required: true
-        - schema:
-            type: string
-            default: playwright-render-page
-          in: query
-          name: scrape_method
-          required: true
-    parameters: []
-    get - copy 2:
-      summary: Get SERP
-      tags: []
-      responses:
-        '200':
-          description: User Found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Get User Alice Smith:
-                  value:
-                    id: 142
-                    firstName: Alice
-                    lastName: Smith
-                    email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
-                    emailVerified: true
-                    signUpDate: '2019-08-24'
-        '404':
-          description: User Not Found
-      operationId: get-scrape
-      description: Retrieve the information from Google SERP page.
-      parameters:
-        - schema:
-            type: string
-            default: hello
-          in: query
-          name: q
-          required: true
-        - schema:
-            type: string
-            default: en
-          in: query
-          name: hl
-          required: true
-        - schema:
-            type: string
-            default: us
-          in: query
-          name: gl
-          required: true
-        - schema:
-            type: string
-            default: playwright-render-page
-          in: query
-          name: scrape_method
-          required: true
-    get - copy:
-      summary: Get SERP
-      tags: []
-      responses:
-        '200':
-          description: User Found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Get User Alice Smith:
-                  value:
-                    id: 142
-                    firstName: Alice
-                    lastName: Smith
-                    email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
-                    emailVerified: true
-                    signUpDate: '2019-08-24'
-        '404':
-          description: User Not Found
-      operationId: get-serp
-      description: Retrieve the information from Google SERP page.
       parameters:
         - schema:
             type: string
